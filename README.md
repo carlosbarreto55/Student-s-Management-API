@@ -22,34 +22,40 @@ RESTful API built with Java Spring Boot, JPA, and PostgreSQL to manage student i
 ## Getting Started
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/Student-s-Management-API.git
-   cd Student-s-Management-API
+    ```bash
+    git clone https://github.com/your-username/Student-s-Management-API.git
+    cd Student-s-Management-API
+    ```
 
+2. **Configure the database:**
+    - Create a PostgreSQL database (e.g., `escola_db`)
+    - Update the `src/main/resources/application.properties` file with your database credentials:
+        ```
+        spring.datasource.url=jdbc:postgresql://localhost:5432/escola_db
+        spring.datasource.username=your_username
+        spring.datasource.password=your_password
+        ```
 
-   Configure the database:
-Create a PostgreSQL database (e.g., escola_db)
-Update the src/main/resources/application.properties file with your database credentials:
-spring.datasource.url=jdbc:postgresql://localhost:5432/escola_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+3. **Build and run the application:**
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+    or
+    ```bash
+    mvn spring-boot:run
+    ```
 
-Build and run the application:
+## API Endpoints
 
-./mvnw spring-boot:run
+- **GET** `/api/alunos` : List all students  
+- **GET** `/api/alunos/{id}` : Get student by ID  
+- **POST** `/api/alunos` : Create a new student  
+- **PUT** `/api/alunos/{id}` : Update student by ID  
+- **DELETE** `/api/alunos/{id}` : Delete student by ID  
 
-mvn spring-boot:run
+## Example JSON
 
-API Endpoints
-
-GET	/api/alunos :	List all students
-GET	/api/alunos/{id} :	Get student by ID
-POST	/api/alunos	: Create a new student
-PUT	/api/alunos/{id}:	Update student by ID
-DELETE	/api/alunos/{id}:	Delete student by ID
-
-Example JSON
-
+```json
 {
   "nome": "Maria Oliveira",
   "email": "maria@email.com",
