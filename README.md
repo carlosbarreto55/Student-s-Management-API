@@ -57,9 +57,9 @@ RESTful API built with Java Spring Boot, JPA, and PostgreSQL to manage student i
 
 ```json
 {
-  "nome": "Maria Oliveira",
-  "email": "maria@email.com",
+  "nome": "Ana Carolina",
+  "email": "ana@email.com",
   "matricula": "2024002",
   "telefone": "(11) 98888-7777",
-  "curso": "Computer Science"
+  "curso": "Computer Engineering"
 }
